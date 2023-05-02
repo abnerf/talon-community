@@ -1,13 +1,13 @@
 -
 settings():
     # Adjust the scale of the imgui to my liking
-    imgui.scale = 1.3
+    imgui.scale = 1.5
 
     # Enable if you'd like the picker gui to automatically appear when explorer has focus
     user.file_manager_auto_show_pickers = 0
 
     # Set the max number of command lines per page in help
-    user.help_max_command_lines_per_page = 50
+    user.help_max_command_lines_per_page = 30
 
     # Set the max number of contexts display per page in help
     user.help_max_contexts_per_page = 20
@@ -58,7 +58,7 @@ settings():
     # copying surrounding text before inserting. This can be slow and may not
     # work in some applications. You may wish to enable this on a
     # per-application basis.
-    # user.context_sensitive_dictation = 1
+    user.context_sensitive_dictation = 1
 
     # How to resize windows moved across physical screens (eg. via `snap next`).
     # Default is 'proportional', which preserves window size : screen size ratio.
@@ -68,3 +68,5 @@ settings():
 
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
+
+speech.timeout = 0.45
