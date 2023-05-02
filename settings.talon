@@ -1,12 +1,12 @@
 settings():
-    # Adjust the scale of the imgui
-    imgui.scale = 1.3
+    # Adjust the scale of the imgui to my liking
+    imgui.scale = 1.5
 
     # If `true`, automatically show the picker GUI when the file manager has focus
     user.file_manager_auto_show_pickers = false
 
-    # Set the number of command lines to display per help page
-    user.help_max_command_lines_per_page = 50
+    # Set the max number of command lines per page in help
+    user.help_max_command_lines_per_page = 30
 
     # Set the number of contexts to display per help page
     user.help_max_contexts_per_page = 20
@@ -59,7 +59,7 @@ settings():
     # (capitalize, space) dictation-mode speech by selecting & copying surrounding text
     # before inserting. This can be slow and may not work in some applications. You may
     # wish to enable this on a per-application basis.
-    # user.context_sensitive_dictation = true
+    user.context_sensitive_dictation = true
 
     # Choose how to resize windows moved across physical screens (eg. via `snap next`).
     # Default is 'proportional', which preserves window size : screen size ratio.
@@ -76,3 +76,4 @@ settings():
 # prone to false positives. If you uncomment this, you will need to say
 # "numb one" to write "1". Note that this tag will eventually be activated by default
 # tag(): user.prefixed_numbers
+speech.timeout = 0.45
