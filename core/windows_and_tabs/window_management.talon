@@ -20,3 +20,31 @@ snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
+
+# Most used apps shortcuts
+coder [<phrase>]$: 
+    user.switcher_focus('code')
+    sleep(300ms)
+    user.parse_phrase(phrase or "")
+slacker [<phrase>]$: 
+    user.switcher_focus('slack')
+    sleep(200ms)
+    user.parse_phrase(phrase or "")
+portal [<phrase>]$: 
+    user.switcher_focus('chrome')
+    sleep(200ms)
+    user.parse_phrase(phrase or "")
+kitty | hacker [<phrase>]$: 
+    user.switcher_focus('kitty')
+    sleep(200ms)
+    user.parse_phrase(phrase or "")
+zapzap | zap [<phrase>]$: 
+    user.switcher_focus('whats')
+    sleep(200ms)
+    user.parse_phrase(phrase or "")
+signal [<phrase>]$: 
+    user.switcher_focus('signal')
+    sleep(200ms)
+    user.parse_phrase(phrase or "")
+spotify:
+    user.switcher_focus('spotify')
