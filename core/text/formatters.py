@@ -107,7 +107,8 @@ def title_case():
                 components = word.split("-")
                 title_case_component = title_case()
                 components = [
-                    title_case_component(j, component, j == len(components) - 1)
+                    title_case_component(
+                        j, component, j == len(components) - 1)
                     for j, component in enumerate(components)
                 ]
                 word = "-".join(components)
@@ -188,7 +189,7 @@ code_formatter_names = {
 prose_formatter_names = {
     "say": "NOOP",
     "speak": "NOOP",
-    "sentence": "CAPITALIZE_FIRST_WORD",
+    "sense": "CAPITALIZE_FIRST_WORD",
     "title": "CAPITALIZE_ALL_WORDS",
 }
 # Mapping from spoken phrases to formatters
