@@ -165,10 +165,13 @@ punctuation_words = {
     "pound sign": "£",
     "hyphen": "-",
     "L paren": "(",
-    "left paren": "(",
+    # "left paren": "(",
+    "left round": "(",
     "R paren": ")",
-    "right paren": ")",
+    # "right paren": ")",
+    "right round": ")",
 }
+
 symbol_key_words = {
     "dot": ".",
     "point": ".",
@@ -177,9 +180,11 @@ symbol_key_words = {
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",
+    "left box": "[",
     "square": "[",
     "R square": "]",
     "right square": "]",
+    "right box": "]",
     "slash": "/",
     "backslash": "\\",
     "minus": "-",
@@ -192,8 +197,11 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
+    "round": "(",
     "brace": "{",
+    "curly": "{",
     "left brace": "{",
+    "left curly": "{",
     "brack": "{",
     "bracket": "{",
     "left bracket": "{",
@@ -202,12 +210,16 @@ symbol_key_words = {
     "r brack": "}",
     "r bracket": "}",
     "right bracket": "}",
+    "right curly": "}",
     "angle": "<",
+    "diamond": "<",
     "left angle": "<",
+    "left diamond": "<",
     "less than": "<",
     "rangle": ">",
     "R angle": ">",
     "right angle": ">",
+    "right diamond": ">",
     "greater than": ">",
     "star": "*",
     "hash": "#",
@@ -220,6 +232,7 @@ symbol_key_words = {
     # Currencies
     "dollar": "$",
     "pound": "£",
+    "stack": ":",
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -252,10 +265,11 @@ alternate_keys = {
     "scratch": "backspace",
     "void": "space",
     "scrape": "escape",
-    # 'junk': 'backspace',
+    'junk': 'backspace',
     "forward delete": "delete",
     "page up": "pageup",
     "page down": "pagedown",
+    "clap": "enter",
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):
