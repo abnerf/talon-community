@@ -1,7 +1,7 @@
 #provide both anchored and unachored commands via 'over'
-phrase <user.text>$:
+phrase <user.text> {user.phrase_ender}:
     user.add_phrase_to_history(text)
-    insert(text)
+    insert(phrase_ender)
 phrase <user.text> over:
     user.add_phrase_to_history(text)
     insert(text)
@@ -10,6 +10,9 @@ phrase <user.text> over:
 <user.format_code>+$: user.insert_many(format_code_list)
 <user.format_code>+ over: user.insert_many(format_code_list)
 <user.formatters> that: user.formatters_reformat_selection(user.formatters)
+{user.prose_formatter} <user.prose> {user.phrase_ender}:
+    user.insert_formatted(prose, prose_formatter)
+    key(phrase_ender)
 word <user.word>:
     user.add_phrase_to_history(word)
     insert(word)
@@ -25,3 +28,4 @@ select that: user.select_last_phrase()
 before that: user.before_last_phrase()
 nope that | scratch that: user.clear_last_phrase()
 nope that was <user.formatters>: user.formatters_reformat_last(formatters)
+trot <user.word>: "{word} "
