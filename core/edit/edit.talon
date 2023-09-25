@@ -179,9 +179,9 @@ new line below | slap: edit.line_insert_down()
     insert(" ")
 
 # Undo/redo
-undo that: edit.undo()
+undo that | nope: edit.undo()
 redo that: edit.redo()
 
 # Save
-file save: edit.save()
-file save all: edit.save_all()
+file save | disk: edit.save()
+file save all | disk all: edit.save_all()
