@@ -192,6 +192,7 @@ prose_formatter_names = {
     "sense": "CAPITALIZE_FIRST_WORD",
     "title": "CAPITALIZE_ALL_WORDS",
 }
+
 # Mapping from spoken phrases to formatters
 formatter_words = {
     phrase: formatters_dict[name]
@@ -210,6 +211,14 @@ mod.list("code_formatter", desc="list of formatters typically applied to code")
 mod.list(
     "prose_formatter", desc="list of prose formatters (words to start dictating prose)"
 )
+
+mod.list("phrase_ender", desc="list of commands that can be used to end a phrase")
+ctx.lists["self.phrase_ender"] = {
+    "void": "space",
+    "clap": "enter",
+    "spam": ", space",
+    "halt": "space:0",
+}
 
 
 @mod.capture(rule="{self.formatters}+")
