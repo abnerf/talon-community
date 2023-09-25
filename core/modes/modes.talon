@@ -10,6 +10,10 @@ not mode: sleep
     mode.disable("sleep")
     mode.disable("dictation")
     mode.enable("command")
+^switch to (command | common | comma) mode$:
+    mode.disable("sleep")
+    mode.disable("dictation")
+    mode.enable("command")
 ^mixed mode$:
   mode.disable("sleep")
   mode.enable("dictation")
