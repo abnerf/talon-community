@@ -67,6 +67,12 @@ class EditActions:
         actions.edit.word_left()
         actions.edit.extend_word_right()
 
+    def delete_word_left_n(n: int):
+        """Delete left n words"""
+        for _ in range(n):
+            actions.edit.extend_word_left()
+        actions.edit.delete()
+
 
 @mod.action_class
 class Actions:

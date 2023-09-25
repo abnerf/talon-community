@@ -165,10 +165,13 @@ punctuation_words = {
     "pound sign": "£",
     "hyphen": "-",
     "L paren": "(",
-    "left paren": "(",
+    # "left paren": "(",
+    "left round": "(",
     "R paren": ")",
-    "right paren": ")",
+    # "right paren": ")",
+    "right round": ")",
 }
+
 symbol_key_words = {
     "dot": ".",
     "point": ".",
@@ -198,7 +201,9 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
+    "round": "(",
     "brace": "{",
+    "curly": "{",
     "left brace": "{",
     "curly bracket": "{",
     "left curly bracket": "{",
@@ -207,11 +212,14 @@ symbol_key_words = {
     "r curly bracket": "}",
     "right curly bracket": "}",
     "angle": "<",
+    "diamond": "<",
     "left angle": "<",
+    "left diamond": "<",
     "less than": "<",
     "rangle": ">",
     "R angle": ">",
     "right angle": ">",
+    "right diamond": ">",
     "greater than": ">",
     "star": "*",
     "hash": "#",
@@ -224,6 +232,7 @@ symbol_key_words = {
     # Currencies
     "dollar": "$",
     "pound": "£",
+    "stack": ":",
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -256,10 +265,11 @@ alternate_keys = {
     "scratch": "backspace",
     "void": "space",
     "scrape": "escape",
-    # 'junk': 'backspace',
+    'junk': 'backspace',
     "forward delete": "delete",
     "page up": "pageup",
     "page down": "pagedown",
+    "clap": "enter",
 }
 # mac apparently doesn't have the menu key.
 if app.platform in ("windows", "linux"):

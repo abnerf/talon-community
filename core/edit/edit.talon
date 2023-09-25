@@ -103,6 +103,9 @@ clear way down:
     edit.extend_file_end()
     edit.delete()
 
+scratcher: user.delete_word_left_n(1)
+scratcher <number_small> times: user.delete_word_left_n(number_small)
+
 # Copy
 copy that: edit.copy()
 copy all: user.copy_all()
