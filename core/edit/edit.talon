@@ -185,3 +185,7 @@ redo that: edit.redo()
 # Save
 file save | disk: edit.save()
 file save all | disk all: edit.save_all()
+
+dictate [<phrase>]$:
+    mode.enable("dictation")
+    user.parse_phrase(phrase or "")
