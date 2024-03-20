@@ -67,6 +67,8 @@ settings():
     # -width windows are resized to stay full-height/width.
     # user.window_snap_screen = "size aware"
 
+    speech.timeout = 0.45
+
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
 # tag(): user.mouse_cursor_commands_enable
@@ -77,4 +79,3 @@ settings():
 # "numb one" to write "1". Note that this tag will eventually be activated by default
 # tag(): user.prefixed_numbers
 
-speech.timeout = 0.45

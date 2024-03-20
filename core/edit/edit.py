@@ -67,11 +67,6 @@ class EditActions:
         actions.edit.word_left()
         actions.edit.extend_word_right()
 
-    def delete_word_left_n(n: int):
-        """Delete left n words"""
-        for _ in range(n):
-            actions.edit.extend_word_left()
-        actions.edit.delete()
 
 
 @mod.action_class
@@ -220,4 +215,10 @@ class Actions:
     def delete_line_end():
         """Delete to end of current line"""
         actions.user.select_line_end()
+        actions.edit.delete()
+
+    def delete_word_left_n(n: int):
+        """Delete left n words"""
+        for _ in range(n):
+            actions.edit.extend_word_left()
         actions.edit.delete()

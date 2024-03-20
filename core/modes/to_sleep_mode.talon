@@ -22,5 +22,8 @@ mode: dictation
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
+    user.notify("Talon sleeping")
 
-^talon sleep [<phrase>]$: speech.disable()
+^talon sleep | snore | drowse [<phrase>]$: 
+    speech.disable()
+    user.notify("Talon sleeping")

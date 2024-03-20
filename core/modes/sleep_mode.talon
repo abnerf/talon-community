@@ -34,5 +34,9 @@ settings():
     user.mouse_wake()
     user.history_enable()
     user.talon_mode()
+    user.notify("Talon awake")
 
 ^(talon wake)+$: speech.enable()
+^(wake up)+$: 
+    speech.enable()
+    user.notify("Talon awake")
