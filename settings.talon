@@ -14,6 +14,9 @@ settings():
     # Set the scroll amount for continuous scroll/gaze scroll
     user.mouse_continuous_scroll_amount = 80
 
+    # Mouse scroll speed
+    user.scroll_speed = 0.7
+
     # If `true`, stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = true
 

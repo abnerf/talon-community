@@ -221,7 +221,8 @@ class UserActions:
         actions.user.vscode("editor.action.insertCursorBelow")
 
     def multi_cursor_add_to_line_ends():
-        actions.user.vscode("editor.action.insertCursorAtEndOfEachLineSelected")
+        actions.user.vscode(
+            "editor.action.insertCursorAtEndOfEachLineSelected")
 
     def multi_cursor_disable():
         actions.key("escape")
@@ -365,4 +366,5 @@ class UserActions:
         actions.key("esc")
 
     def insert_snippet(body: str):
-        actions.user.run_rpc_command("editor.action.insertSnippet", {"snippet": body})
+        actions.user.run_rpc_command(
+            "editor.action.insertSnippet", {"snippet": body})

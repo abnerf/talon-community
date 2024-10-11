@@ -227,7 +227,8 @@ class Actions:
     def mouse_move_center_active_window():
         """move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-        ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
+        ctrl.mouse_move(rect.left + (rect.width / 2),
+                        rect.top + (rect.height / 2))
 
     def hiss_scroll_up():
         """Change mouse hiss scroll direction to up"""
